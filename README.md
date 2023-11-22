@@ -6,4 +6,4 @@
 ## Branches
 
 - complete => main
-- starter => starter
+- project starter => starter
