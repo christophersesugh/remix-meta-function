@@ -5,5 +5,5 @@
 
 ## Branches
 
-- complete => main
-- project starter => starter
+- main
+- starter
