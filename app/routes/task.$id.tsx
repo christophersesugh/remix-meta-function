@@ -1,6 +1,10 @@
-import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import type { LoaderFunctionArgs } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
+import { metaFn } from "~/utils/meta";
 import { tasks } from "~/utils/tasks.server";
+
+export const meta = metaFn;
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const taskId = Number(params.id);
