@@ -1,5 +1,5 @@
 import { json, type MetaFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { tasks } from "~/utils/tasks.server";
 
 export const meta: MetaFunction = () => {
@@ -18,8 +18,9 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Tasks</h1>
+      <Link to="terms-of-use">Terms of use</Link>
       <ul>
-        {tasks.length ? (
+        {tasks.length > 0 ? (
           tasks.map((task, index) => (
             <li key={`${task.id}-${index}`}>
               <a href={`/task/${task.id}`}>{task.title}</a>
